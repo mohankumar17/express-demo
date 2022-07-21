@@ -1,10 +1,11 @@
 const express = require("express");
 
 const router = express.Router();
+const adminData = require("./admin");
 
 router.get("/", (req, res, next) => {
-  console.log("Home Page Middleware");
-  res.send("<h2>Home Page</h2>");
+  console.log(adminData.patients);
+  res.render("home", { pageTitle: "Homepage", patients: adminData.patients });
 });
 
 module.exports = router;

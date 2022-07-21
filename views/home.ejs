@@ -1,0 +1,14 @@
+<%- include('includes/head.ejs') %>
+    </head>
+
+    <body>
+        <h2>Patients </h2>
+        <% if (patients.length> 0) { %>
+            <% for (let patient of patients) { %>
+                <p>
+                    <%= patient.name %>
+                </p>
+                <% } %>
+                    <% } %>
+
+                        <%- include('includes/end.ejs') %>
